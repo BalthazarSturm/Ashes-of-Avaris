@@ -1,0 +1,82 @@
+﻿focus_tree = {
+	id = al_agirian_focus
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = ALA
+		}
+	}
+	
+	default = no
+	
+	continuous_focus_position = { x = 50 y = 1000 }
+
+	focus = {
+		id = ALA_the_sultan_bows
+		icon = focus_ALA_handshake_arab
+		mutually_exclusive = { focus = ALA_the_crescent_assembly }
+		x = 8
+		y = 5
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 10
+			}
+		}
+
+		available = {
+			is_puppet = yes
+			is_subject_of = TER
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = ALA_loyalty_to_the_league
+			}
+		}
+	
+	focus = {
+    id = ALA_the_crescent_assembly
+    icon = GFX_goal_generic_revolt
+    prerequisite = { }
+    x = 3
+    y = 5
+
+    cost = 10
+	
+	ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 10
+			}
+		}
+
+    mutually_exclusive = { focus = ALA_the_sultan_bows }
+
+    available = {
+    }
+
+    bypass = {
+    }
+
+    cancel_if_invalid = yes
+    continue_if_invalid = no
+    available_if_capitulated = no
+
+    completion_reward = {
+        add_ideas = ALA_dissent_grows
+		set_country_flag = ALA_crescent_assembly_formed
+		}
+	}
+}
